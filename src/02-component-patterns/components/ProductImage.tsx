@@ -7,19 +7,19 @@ import styles from '../styles/styles.module.css';
 
 
 export interface Props {
-    pImg?: string,
+    img?: string,
     className?: string,
     style?: React.CSSProperties
 }
 
-export const ProductImage = ({ pImg = '', className, style }:Props ) => {
+export const ProductImage = ({ img = '', className, style }:Props ) => {
 
     const { product } = useContext( ProductContext );
 
     let imgToShow: string;
 
-    if( pImg ){
-        imgToShow = pImg;
+    if( img ){
+        imgToShow = img;
     } else if( product.img ) {
         imgToShow = product.img;
     }else{
